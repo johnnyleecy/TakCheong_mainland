@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #fdf3f1;
+  --color-brand-100: #fbe5e1;
+  --color-brand-200: #f7cfc8;
+  --color-brand-300: #f0aea2;
+  --color-brand-400: #e68372;
+  --color-brand-500: #d95d48;
+  --color-brand-600: #c8452c;
+  --color-brand-700: #a83824;
+  --color-brand-800: #8b3021;
+  --color-brand-900: #742c20;
+  --color-brand-950: #3f140d;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 隱藏 number input 的增減箭頭（後台表單用） */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 內容長文排版 */
+.rich-text {
+  line-height: 1.85;
+}
+.rich-text h3 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin: 1.5rem 0 0.5rem;
+  color: #742c20;
+}
+.rich-text p {
+  margin: 0.5rem 0;
+  color: #374151;
+}

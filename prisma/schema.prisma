@@ -1,0 +1,53 @@
+// Tak Cheong Hardware — 大陸版官網資料庫 Schema
+// 本機 PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 過往工作參考項目
+model Project {
+  id          String   @id @default(cuid())
+  title       String // 標題
+  description String   @db.Text // 內容介紹
+  images      String[] @default([]) // 多張圖片（最多 10 張）
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([createdAt])
+}
+
+// 最新消息
+model News {
+  id          String   @id @default(cuid())
+  title       String // 標題
+  summary     String   @db.Text // 簡介
+  publisher   String // 發佈者
+  publishedAt DateTime // 發佈的日期時間
+  sections    Json     @default("[]") // 內容介紹：小標題及內文為一組 [{subtitle, body}]
+  images      String[] @default([]) // 多張圖片（最多 10 張）
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([publishedAt])
+}
+
+// 預約維修申請
+model Booking {
+  id            String   @id @default(cuid())
+  salutation    String // 稱呼
+  phone         String // 電話號碼
+  email         String // 電郵
+  wechat        String? // WeChat ID
+  serviceType   String // 維修服務類型
+  preferredTime String // 理想的服務日期或時段
+  status        String   @default("NEW") // NEW / DONE
+  createdAt     DateTime @default(now())
+
+  @@index([createdAt])
+}
