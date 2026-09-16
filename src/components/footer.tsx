@@ -40,9 +40,9 @@ export default function Footer() {
             <ul className="mt-5 space-y-2.5 text-sm">
               <li className="flex items-center gap-2">
                 <PhoneIcon className="h-4 w-4 shrink-0 text-brand-400" />
-                <a href={siteConfig.phoneHref} className="hover:text-white">
-                  {siteConfig.phoneDisplay}
-                </a>
+                <p>
+                    {siteConfig.phoneDisplay}
+                  </p>
               </li>
               {storeAddresses.map((a) => (
                 <li key={a.label} className="flex items-start gap-2">

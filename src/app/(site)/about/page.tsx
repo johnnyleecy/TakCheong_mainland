@@ -114,9 +114,9 @@ export default function AboutPage() {
                 ))}
                 <li className="flex items-center gap-2">
                   <PhoneIcon className="h-4 w-4 shrink-0 text-brand-600" />
-                  <a href={siteConfig.phoneHref} className="hover:text-brand-700">
+                  <p>
                     {siteConfig.phoneDisplay}
-                  </a>
+                  </p>
                 </li>
               </ul>
               <Link

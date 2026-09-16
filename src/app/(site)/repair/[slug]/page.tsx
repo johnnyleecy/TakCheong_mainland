@@ -182,13 +182,13 @@ export default async function ServicePage({
                 立即预约
                 <ArrowRightIcon className="h-4 w-4" />
               </Link>
-              <a
+              {/* <a
                 href={siteConfig.phoneHref}
                 className="mt-3 flex items-center justify-center gap-2 rounded-lg border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-50"
               >
                 <PhoneIcon className="h-4 w-4 text-brand-600" />
                 {siteConfig.phoneDisplay}
-              </a>
+              </a> */}
             </div>
 
             <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">

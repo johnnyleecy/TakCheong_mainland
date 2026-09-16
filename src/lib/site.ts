@@ -58,7 +58,7 @@ export const socialLinks = [
 
 // 導覽列
 export const navLinks = [
-  { href: "/repair", label: "首页" },
+  { href: "/", label: "首页" },
   { href: "/projects", label: "过往项目" },
   { href: "/news", label: "最新消息" },
   { href: "/hardware-order", label: "五金零售" },

@@ -65,13 +65,13 @@ export default function HardwareOrderPage() {
             面向装修师傅、物业、五金同行及 DIY 客户，小批量、多批次灵活供货，随订随取。
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
+            {/* <a
               href={siteConfig.phoneHref}
               className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-sm font-semibold text-brand-700 hover:bg-brand-50"
             >
               <PhoneIcon className="h-4 w-4" />
               {siteConfig.phoneDisplay}
-            </a>
+            </a> */}
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 rounded-lg border border-white/40 px-6 py-3 text-sm font-semibold hover:bg-white/10"
@@ -146,12 +146,12 @@ export default function HardwareOrderPage() {
             微信或电话把清单发给我们，快速报价、随订随取。
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <a
+            {/* <a
               href={siteConfig.phoneHref}
               className="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-brand-700 hover:bg-brand-50"
             >
               电话联系：{siteConfig.phoneDisplay}
-            </a>
+            </a> */}
             <Link
               href="/contact"
               className="rounded-lg border border-white/40 px-6 py-3 text-sm font-semibold hover:bg-white/10"

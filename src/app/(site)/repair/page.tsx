@@ -12,7 +12,7 @@ import {
 } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: "香港水电维修 · 水管瓷砖门窗油漆 · 快速上门",
+  title: "水电维修 · 水管瓷砖门窗油漆 · 快速上门",
   description:
     "德昌五金提供水电维修、水管维修、瓷砖维修、门窗维修、墙面油漆及商业装修维修等一站式上门服务，持牌师傅经验丰富、报价透明，欢迎预约。",
   alternates: { canonical: "/repair" },
@@ -76,10 +76,10 @@ export default function RepairPage() {
               20 年老字号 · 持牌师傅
             </span>
             <h1 className="mt-5 text-4xl font-bold leading-tight sm:text-5xl">
-              香港水电维修，一个电话，快速上门
+              水电维修，一个电话，快速上门
             </h1>
             <p className="mt-4 text-lg text-brand-50">
-              德昌五金扎根深水埗逾 20 年，提供水电、水管、瓷砖、门窗、油漆及商业装修等一站式维修服务，
+              德昌五金扎根香港深水埗逾 20 年，提供水电、水管、瓷砖、门窗、油漆及商业装修等一站式维修服务，
               报价透明、施工规范，让维修变简单。
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -90,13 +90,13 @@ export default function RepairPage() {
                 立即预约
                 <ArrowRightIcon className="h-4 w-4" />
               </Link>
-              <a
+              {/* <a
                 href={siteConfig.phoneHref}
                 className="inline-flex items-center gap-2 rounded-lg border border-white/40 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >
                 <PhoneIcon className="h-4 w-4" />
                 {siteConfig.phoneDisplay}
-              </a>
+              </a> */}
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-brand-100">
               <span className="inline-flex items-center gap-1.5">
@@ -228,12 +228,12 @@ export default function RepairPage() {
             >
               预约维修
             </Link>
-            <a
+            {/* <a
               href={siteConfig.phoneHref}
               className="rounded-lg border border-white/40 px-6 py-3 text-sm font-semibold hover:bg-white/10"
             >
               电话联系：{siteConfig.phoneDisplay}
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

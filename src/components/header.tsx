@@ -1,23 +1,28 @@
 "use client";
-
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { siteConfig, navLinks } from "@/lib/site";
 import { services } from "@/lib/services";
-import { ChevronDownIcon, MenuIcon, PhoneIcon, XIcon } from "@/components/icons";
+import { ChevronDownIcon, MenuIcon, XIcon } from "@/components/icons";
+import logoimg from "../../public/logo.png";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [svcOpen, setSvcOpen] = useState(false);
-
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
-        {/* Logo */}
-        <Link href="/repair" className="flex items-center gap-2.5">
-          <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-600 text-lg font-bold text-white shadow-sm">
-            德
-          </span>
+        {/* Logo 左上角區塊 */}
+        <Link href="/" className="flex items-center gap-2.5">
+          <Image
+            src={logoimg}
+            alt="网站logo"
+            width={40}
+            height={40}
+            priority
+            className="rounded object-contain"
+          />
           <span className="leading-tight">
             <span className="block text-lg font-bold tracking-wide text-slate-900">
               {siteConfig.name}
@@ -31,12 +36,11 @@ export default function Header() {
         {/* 桌面导航 */}
         <nav className="hidden items-center gap-1 lg:flex">
           <Link
-            href="/repair"
+            href="/"
             className="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-brand-700"
           >
             首页
           </Link>
-
           <div className="relative">
             <button
               type="button"
@@ -64,7 +68,6 @@ export default function Header() {
               </div>
             )}
           </div>
-
           {navLinks.slice(1).map((link) => (
             <Link
               key={link.href}
@@ -115,7 +118,7 @@ export default function Header() {
                   key={s.slug}
                   href={`/repair/${s.slug}`}
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm text-slate-700 hover:bg-brand-50 hover:text-brand-700"
+                  className="flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm text-slate-700 hover:bg-brand-50"
                 >
                   <span aria-hidden>{s.icon}</span>
                   {s.name}
