@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /staff/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /logout/
+
+Sitemap: https://takcheong.online/sitemap.xml

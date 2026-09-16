@@ -27,7 +27,7 @@ export async function sendMail(opts: {
 }): Promise<SendResult> {
   const t = getTransporter();
   const from =
-    process.env.MAIL_FROM || process.env.SMTP_USER || "德昌五金 <no-reply@takcheong.cn>";
+    process.env.MAIL_FROM || process.env.SMTP_USER || "德昌五金 <takcheonghw@gmail.com>";
 
   if (!t) {
     console.warn("[mailer] SMTP 未设置，跳过寄信（请在 .env 填写 Gmail 账号与应用程式密码）");

@@ -1,7 +1,7 @@
 // 站點全域設定（靜態、可安全用於 Client 元件）
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.takcheong.cn";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://takcheong.online";
 
 export const siteConfig = {
   name: "德昌五金",
